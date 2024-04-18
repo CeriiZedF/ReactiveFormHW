@@ -1,0 +1,58 @@
+<div class="container">
+    <h1>Checkout</h1>
+    <h2>Delivery options</h2>
+    <hr>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <fieldset [formGroupName]="'user'" [disabled]="flag">
+            <div class="form-group">
+                <input type="text"
+                class="form-control"
+                [formControlName]="'firstName'" placeholder="First Name">
+                
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control"
+                    [formControlName]="'lastName'" placeholder="Last Name">
+            </div>
+            <div class="form-group">  
+                <input type="text"
+                class="form-control"
+                [formControlName]="'address'" placeholder="Address">
+                
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control"
+                [formControlName]="'email'" placeholder='Email'>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control"
+                [formControlName]="'phone_number'" placeholder="Phone Number">
+            </div>
+
+            
+            <button class="btn btn-success" type="submit" [disabled]="form.get('user')?.invalid">Save & Continue</button>
+    </fieldset>
+</form>
+    <h2>Delivery:</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+        <fieldset [formGroupName]="'delivery'" [disabled]="!flag && form.get('user')?.invalid  ">
+            
+            <hr>
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="text"
+                class="form-control"
+                [formControlName]="'address'">
+            </div>
+            <div class="form-group">
+                <label>Code</label>
+                <input type="text" class="form-control"
+                [formControlName]="'code'" >
+
+            </div>
+            
+            <button class="btn btn-success" type="submit" [disabled]="form.invalid">Send</button>
+    </fieldset>
+
+</form>
+  </div>
