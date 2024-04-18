@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
 
+![Screenshot 2024-04-18 184106](https://github.com/CeriiZedF/ReactiveFormHW/assets/60105990/038536fb-72db-4418-b9aa-7859387fd6b0)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
